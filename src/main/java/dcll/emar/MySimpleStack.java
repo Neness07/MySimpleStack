@@ -1,10 +1,19 @@
+/*
+ * MySimpleStack
+ *
+ *
+ * 13/04/2016
+ *
+ * Copyright Ernesto MARKELINY
+ */
+
 package dcll.emar;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
- * Created by Neness on 17/02/2016.
+ * Description de MySimpleStack.
  */
 public class MySimpleStack implements SimpleStack {
     /**
@@ -12,12 +21,19 @@ public class MySimpleStack implements SimpleStack {
      */
     private Stack<Item> mStack;
 
-    public MySimpleStack(){
+    /**
+     * Constructor.
+     */
+    public MySimpleStack() {
         this(new Stack<Item>());
     }
 
-    public MySimpleStack(Stack<Item> mStack) {
-        this.mStack = mStack;
+    /**
+     * Constructor.
+     * @param aStack un stack
+     */
+    public MySimpleStack(final Stack<Item> aStack) {
+        this.mStack = aStack;
     }
 
     @Override
@@ -32,7 +48,7 @@ public class MySimpleStack implements SimpleStack {
     }
 
     @Override
-    public void push(Item item) {
+    public void push(final Item item) {
         mStack.push(item);
     }
 

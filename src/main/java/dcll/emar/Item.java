@@ -1,42 +1,50 @@
+/*
+ * MySimpleStack
+ *
+ *
+ * 13/04/2016
+ *
+ * Copyright Ernesto MARKELINY
+ */
 package dcll.emar;
 
 /**
- * Created by Neness on 17/02/2016.
+ * calsse Item.
  */
 public class Item {
     /**
      *
      */
-    private int val;
+    private Object value;
+
+    /**
+     * Constructeur sans parametre.
+     */
+    public Item() {
+        this(new Object());
+    }
+
+    /**
+     * constructeur avec parametre.
+     * @param val un objet quelconque
+     */
+    public Item(final Object val) {
+        this.setVal(val);
+    }
 
     /**
      *
+     * @param val un objet quelconque
      */
-    public Item(){
-        this(0);
+    public void setVal(final Object val) {
+        this.value = val;
     }
 
     /**
      *
-     * @param val
+     * @return un objet contenu dans cet item
      */
-    public Item(int val){
-        this.val = val;
-    }
-
-    public void setVal(int val) {
-        this.val = val;
-    }
-
-    public int getVal() {
-        return val;
-    }
-
-    public int oppose(){
-        return -1 * val;
-    }
-
-    public boolean estNegatif(){
-        return val < 0;
+    public Object getVal() {
+        return this.value;
     }
 }

@@ -1,35 +1,53 @@
+/*
+ * SimpleStack
+ *
+ *
+ * 13/04/2016
+ *
+ * Copyright Ernesto MARKELINY
+ */
+
 package dcll.emar;
 
 import java.util.EmptyStackException;
 
 /**
- * Created by Neness on 17/02/2016.
+ * Interface SimpleStack.
  */
 public interface SimpleStack {
     /**
-     * Tests if this stack is empty
+     * Tests if this stack is empty.
+     * @return true if this stack is empty, false otherwise
      */
-    public boolean isEmpty();
+    boolean isEmpty();
 
     /**
      * Returns the number of items in this stack.
+     * @return a size of this stack
      */
-    public int getSize();
+    int getSize();
 
     /**
      * Pushes an item onto the top of this stack.
      * null item is allowed.
+     * @param item un item
      */
-    public void push(Item item);
+    void push(Item item);
 
     /**
-     * Looks at the object at the top of this stack without removing it from the stack.
+     * Looks at the object at the top of this stack without removing it
+     * from the stack.
+     * @return the object object at the the top if this stack is not empty.
+     * @throws EmptyStackException if this stack is empty.
      */
-    public Item peek() throws EmptyStackException;
+    Item peek() throws EmptyStackException;
 
     /**
-     * Removes the object at the top of this stack and returns that object as the value of this function.
-     *@throws EmptyStackException if this stack is empty.
+     * Removes the object at the top of this stack and returns that object
+     * as the value of this function.
+     *
+     * @return the object object at the the top if this stack is not empty.
+     * @throws EmptyStackException  if this stack is empty.
      */
-    public Item pop() throws EmptyStackException ;
+    Item pop() throws EmptyStackException;
 }
